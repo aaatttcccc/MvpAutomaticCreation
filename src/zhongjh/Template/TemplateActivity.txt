@@ -1,0 +1,19 @@
+package $packagename;
+
+import com.yaoguang.appcommon.common.base.BaseSubmitProgressActivity;
+import com.yaoguang.common.base.BasePresenter;
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public class $nameActivity extends BaseActivity{
+
+    @Override
+    public BasePresenter getPresenter() {
+        return null;
+    }
+
+}

@@ -1,0 +1,63 @@
+package $packagename;
+
+import com.yaoguang.common.adapter.BaseLoadMoreRecyclerAdapter;
+import com.yaoguang.common.base.BaseFragmentListConditionDataBind;
+import com.yaoguang.common.base.interfaces.BasePresenterListCondition;
+import com.yaoguang.company.R;
+import com.yaoguang.company.databinding.Fragment$nameBinding;
+import com.yaoguang.company.$lowerCaseName.adapter.$nameAdapter;
+import com.yaoguang.greendao.entity.App$nameWrapper;
+import com.yaoguang.greendao.entity.$nameCondition;
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $moduleNameChinese 窗体
+ * @date $date
+ */
+public class $nameFragment extends BaseFragmentListConditionDataBind<App$nameWrapper, $nameCondition, Fragment$nameBinding> implements $nameContract.View{
+
+    $nameContract.Presenter mPresenter = new $namePresenter(this);
+    $nameCondition m$nameCondition = new $nameCondition();
+
+    @Override
+    public BasePresenterListCondition getPresenterrConditionList() {
+        return mPresenter;
+    }
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_&_name;
+    }
+
+    @Override
+    public BaseLoadMoreRecyclerAdapter getAdapter() {
+        return new $nameAdapter();
+    }
+
+    @Override
+    public $nameCondition getCondition(boolean isRegain) {
+        if (isRegain) {
+            if (mViewBinding != null) {
+                //m$nameCondition.setXXX(mViewBinding.tvValue.getText().toString());
+            }
+        }
+        return m$nameCondition;
+    }
+
+    @Override
+    public void init() {
+        mPresenter.subscribe();
+        if (mViewBinding.toolbarCommon != null) {
+            initToolbarNav(mToolbarCommonBinding.toolbar, "$moduleNameChinese", R.menu.shipschedule, $nameFragment.this);
+        }
+        //绑定数据
+        mViewBinding.set$nameCondition(m$nameCondition);
+    }
+
+    @Override
+    public void initListener() {
+
+    }
+
+}

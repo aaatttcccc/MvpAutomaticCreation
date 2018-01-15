@@ -1,0 +1,30 @@
+package $packagename;
+
+import com.yaoguang.common.base.interfaces.BaseListConditionView;
+import com.yaoguang.common.base.interfaces.BasePresenter;
+import com.yaoguang.common.base.interfaces.BasePresenterListCondition;
+
+
+import com.yaoguang.common.base.interfaces.BaseView;
+import com.yaoguang.greendao.entity.App$nameWrapper;
+import com.yaoguang.greendao.entity.$nameCondition;
+
+
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $moduleNameChinese 关联接口
+ * @date $date
+ */
+public interface $nameContract {
+
+    interface Presenter extends BasePresenter, BasePresenterListCondition<$nameCondition> {
+
+    }
+
+    interface View extends BaseView, BaseListConditionView<App$nameWrapper, $nameCondition> {
+
+
+    }
+}
