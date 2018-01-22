@@ -1,0 +1,40 @@
+package $packagename;
+
+import com.yaoguang.common.base.impl.BaseListConditionPresenter;
+import com.yaoguang.common.base.interfaces.BaseListConditionView;
+import com.yaoguang.common.net.bean.BaseResponse;
+import com.yaoguang.common.net.bean.PageList;
+import com.yaoguang.greendao.entity.App$nameWrapper;
+import com.yaoguang.greendao.entity.$nameCondition;
+
+import io.reactivex.Observable;
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $moduleNameChinese 控制层
+ * @date $date
+ */
+public class $namePresenter extends BaseListConditionPresenter<$nameCondition, App$nameWrapper> implements $nameContract.Presenter {
+
+    private $nameContract.View mView;
+
+    $namePresenter($nameContract.View view) {
+        mView = view;
+    }
+
+    @Override
+    public void subscribe() {
+
+    }
+
+    @Override
+    protected BaseListConditionView getBaseListView() {
+        return mView;
+    }
+
+    @Override
+    protected Observable<BaseResponse<PageList<App$nameWrapper>>> initDatas($nameCondition condition, int pageIndex) {
+        return null;
+    }
+}

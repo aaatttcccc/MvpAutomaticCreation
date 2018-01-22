@@ -1,0 +1,33 @@
+package $packagename;
+
+import $basepackagename.BasePresenter;
+import $basepackagename.BaseView;
+
+import com.yaoguang.common.base.interfaces.BaseListConditionView;
+import com.yaoguang.common.base.interfaces.BasePresenter;
+import com.yaoguang.common.base.interfaces.BasePresenterListCondition;
+
+
+import com.yaoguang.common.base.interfaces.BaseView;
+import com.yaoguang.greendao.entity.AppPriceTruckWrapper;
+import com.yaoguang.greendao.entity.PriceTruckCondition;
+
+
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public interface $nameContract {
+
+    public interface Presenter extends BasePresenter, BasePresenterListCondition<PriceTruckCondition> {
+
+    }
+
+    public interface View extends BaseView, BaseListConditionView<AppPriceTruckWrapper, PriceTruckCondition> {
+
+
+    }
+}

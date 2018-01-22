@@ -1,0 +1,46 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>MvpAutomaticCreation</name>
+  <version>1.5</version>
+  <vendor email="254191389@qq.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <description><![CDATA[
+      Android Studio插件，一个生成mvp框架代码的插件
+    ]]></description>
+
+  <change-notes><![CDATA[
+      1.5<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="146.0"/>
+
+
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products-->
+  <depends>com.intellij.modules.lang</depends>
+
+  <!--扩展组件注册 要是用到applicationConfigurable即项目配置等就在这里注册-->
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+
+
+    <!-- 自定义配置界面 -->
+    <applicationConfigurable instance="settings.Settings"/>
+
+  </extensions>
+
+  <!--Action注册，比如在某个菜单下增加一个按钮就要在这注册 -->
+  <actions>
+    <!-- Add your actions here -->
+    <action id="MvpPlugin.ID" class="zhongjh.MvpAutomaticCreationAction" text="MvpAutomaticCreationHelp"
+            description="生成mvp框架代码">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt T"/>
+    </action>
+  </actions>
+
+</idea-plugin>
